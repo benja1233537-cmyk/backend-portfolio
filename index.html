@@ -759,6 +759,34 @@ html.portfolio-opening-active {
   .capstone-evidence .capstone-reading-source a { color: #334454; }
 }
 </style>
+<style id="contact-phone-style">
+#contact .contact-methods {
+  display: grid;
+  justify-items: start;
+  gap: 4px;
+  min-width: 0;
+}
+#contact .contact-methods .email,
+#contact .contact-phone {
+  display: inline-flex;
+  flex-wrap: wrap;
+  column-gap: .6rem;
+  align-items: baseline;
+}
+#contact .contact-methods .email { overflow-wrap: anywhere; }
+#contact .contact-phone {
+  min-height: 36px;
+  padding: 3px 0;
+  border-bottom: 1px solid transparent;
+  font-size: clamp(1.02rem, 2vw, 1.32rem);
+  font-weight: 550;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.5;
+}
+#contact .contact-methods .email > span:first-child,
+#contact .contact-phone span { font-size: .875rem; font-weight: 600; }
+#contact .contact-phone:hover { border-color: currentColor; }
+</style>
 </head>
 <body class="visual-portfolio">
 <dialog id="portfolio-opening" class="portfolio-opening" aria-label="포트폴리오 인트로" aria-describedby="opening-quote">
@@ -1531,7 +1559,10 @@ html.portfolio-opening-active {
 </div>
 <h2 id="contact-title">신뢰할 수 있는 서비스를,<br>함께 만들어요.</h2>
 <div class="contact-bottom">
-<a class="email" href="mailto:benja123@naver.com">benja123@naver.com</a><div class="contact-actions">
+<div class="contact-methods">
+<a class="email" href="mailto:benja123@naver.com"><span>메일 보내기</span> <span>benja123@naver.com</span></a>
+<a class="contact-phone" href="tel:+821030620428"><span>휴대전화</span> 010-3062-0428</a>
+</div><div class="contact-actions">
 <button id="copy-contact" type="button">이메일 주소 복사</button><a href="https://www.figma.com/design/ZDK9I4r4PZa2gUFIGVpyjf/%EC%BA%A3%EC%B1%B1?node-id=270-2138" rel="noopener noreferrer" target="_blank">Figma</a><a href="https://github.com/catchap-captcha/catchap-backend" rel="noopener noreferrer" target="_blank">GitHub</a>
 </div>
 </div>
