@@ -764,29 +764,32 @@ html.portfolio-opening-active {
 #contact .contact-methods {
   display: grid;
   justify-items: start;
-  gap: 4px;
+  gap: .25rem;
   min-width: 0;
+  max-width: 100%;
 }
-#contact .contact-methods .email,
-#contact .contact-phone {
-  display: inline-flex;
-  flex-wrap: wrap;
-  column-gap: .6rem;
+#contact .contact-methods > :is(.email, .contact-phone) {
+  display: grid;
+  grid-template-columns: 4.65rem minmax(0, 1fr);
   align-items: baseline;
-}
-#contact .contact-methods .email { overflow-wrap: anywhere; }
-#contact .contact-phone {
-  min-height: 36px;
-  padding: 3px 0;
+  column-gap: .6rem;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 2.5rem;
+  padding: .28rem 0;
   border-bottom: 1px solid transparent;
   font-size: clamp(1.02rem, 2vw, 1.32rem);
   font-weight: 550;
   font-variant-numeric: tabular-nums;
   line-height: 1.5;
+  letter-spacing: normal;
+  overflow-wrap: anywhere;
 }
-#contact .contact-methods .email > span:first-child,
-#contact .contact-phone span { font-size: .875rem; font-weight: 600; }
-#contact a.contact-phone:hover { border-color: currentColor; }
+#contact .contact-methods > :is(.email, .contact-phone) > span:first-child {
+  font-size: .875rem;
+  font-weight: 600;
+}
+#contact .contact-methods > a:hover { border-color: currentColor; }
 </style>
 <style id="readable-redesign">
 /* Read-first redesign — original evidence styles remain intact */
