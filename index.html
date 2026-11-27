@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 
-<html lang="ko" data-theme="light">
+<html lang="ko" data-theme="dark">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#101b26">
 <script id="portfolio-theme-script">
 (() => {
   const root = document.documentElement;
@@ -23,7 +23,7 @@
     if (themeColor) themeColor.content = theme === 'dark' ? '#101b26' : '#ffffff';
   }
 
-  applyTheme(savedTheme === 'dark' ? 'dark' : 'light');
+  applyTheme(savedTheme === 'light' ? 'light' : 'dark');
 
   document.addEventListener('DOMContentLoaded', () => {
     const button = document.getElementById('theme-toggle');
